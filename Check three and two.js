@@ -1,4 +1,4 @@
-// Code wars Kata8 Solutions
+// Code wars Kata7 Solutions
 
 /*
 Given an array with exactly 5 strings "a", "b" or "c" (chars in Java, characters in Fortran),
@@ -11,16 +11,24 @@ Examples
 */
 
 /*
-  1) Use filter method to return unique values 
-  2) Use length to get the length of each array
-  3) Check the conditions
+    1) Create counter for each character
+    2) Loop over the array and use trenray operator to add the count to the Specified Char
+    3) Use logical operators to check the condiotions 
 */
 
-// Solution
-function checkThreeAndTwo(array) {
-  let a = array.filter(value => value.match('a')).length;
-  let b = array.filter(value => value.match('b')).length;
-  let c = array.filter(value => value.match('c')).length;
-  return (a === 3 || b === 3 || c === 3) && (a === 2 || b === 2 || c === 2);
+//Solution
+function checkThreeAndTwo(arr) {
+  let countA = 0;
+  let countB = 0;
+  let countC = 0;
+
+  arr.forEach(ele => {
+    ele === 'a' ? countA++ : ele === 'b' ? countB++ : countC++;
+  });
+  return (
+    (countA === 3 && (countB === 2 || countC === 2)) ||
+    (countB === 3 && (countA === 2 || countC === 2)) ||
+    (countC === 3 && (countB === 2 || countA === 2))
+  );
 }
-console.log(checkThreeAndTwo(['a', 'c', 'a', 'c', 'b']));
+console.log(checkThreeAndTwo(['c', 'c', 'b', 'b', 'c']));
