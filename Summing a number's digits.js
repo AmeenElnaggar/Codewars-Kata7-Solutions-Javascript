@@ -20,7 +20,7 @@ For example: (Input --> Output)
 function sumDigits(number) {
   return Math.abs(number)
     .toString()
-    .split('')
+    .split("")
     .reduce((s, e) => s + +e, 0);
 }
 console.log(sumDigits(-32));
