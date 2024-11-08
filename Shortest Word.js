@@ -7,14 +7,13 @@ String will never be empty and you do not need to account for different data typ
 */
 
 /*
-    1) Use split method to get array from the string
-    2) Loop over the array with map method and return each element length
-    3) Use Math.min() method to get the shortest length
+    1) Use split to get array from the string
+    2) Loop over the array and get the length of each element 
+    3) Use Math.min method and spread opreator to return the minimum number
 */
 
 //Solution
 function findShort(s) {
-  let arrayOfLength = s.split(' ').map(ele => ele.length);
-  return Math.min(...arrayOfLength);
+  return Math.min(...s.split(' ').map(ele => ele.length));
 }
 console.log(findShort('bitcoin take over the world maybe who knows perhaps'));
