@@ -28,6 +28,6 @@ function checkExam(array1, array2) {
     return ele === array2[i] ? 4 : array2[i].length > 0 ? -1 : 0;
   });
   const result = pointsArray.reduce((acc, ele) => acc + ele);
-  return result > 0 ? result : 0;
+  return result > 0 ? result : 0
 }
 console.log(checkExam(['b', 'c', 'b', 'a'], ['', 'a', 'a', 'c']));

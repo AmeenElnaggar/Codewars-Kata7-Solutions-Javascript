@@ -31,4 +31,4 @@ function checkThreeAndTwo(arr) {
     (countC === 3 && (countB === 2 || countA === 2))
   );
 }
-console.log(checkThreeAndTwo(['c', 'c', 'b', 'b', 'c']));
+console.log(checkThreeAndTwo(['c', 'c', 'b', 'b', 'c']))

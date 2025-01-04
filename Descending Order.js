@@ -28,7 +28,7 @@ Solution 2 :
 function descendingOrder(n) {
   // Sol 1
   //   const numbersArray = Array.from(`${n}`).map(ele => +ele);
-  //   return +numbersArray.sort((a, b) => b - a).join('');
+  //   return +numbersArray.sort((a, b) => b - a).join('')
 
   //Sol 2
   const numbersArray = Array.from(`${n}`).reverse();
